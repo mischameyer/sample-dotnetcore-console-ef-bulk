@@ -66,7 +66,10 @@ namespace sample_dotnetcore_console_ef_bulk.Services
                 _dbContext.Entry(item).Property("Price").IsModified = true;                
             }
 
+            Console.WriteLine("Begin Update: {0}", DateTime.Now);
             _dbContext.SaveChanges();
+            //_dbContext.BulkUpdate(res);
+            Console.WriteLine("End Update: {0}", DateTime.Now);
 
         }
 
