@@ -67,8 +67,8 @@ namespace sample_dotnetcore_console_ef_bulk.Services
             }
 
             Console.WriteLine("Begin Update: {0}", DateTime.Now);
-            _dbContext.SaveChanges();
-            //_dbContext.BulkUpdate(res);
+            //_dbContext.SaveChanges();
+            _dbContext.BulkUpdate(res);
             Console.WriteLine("End Update: {0}", DateTime.Now);
 
         }
